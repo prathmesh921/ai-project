@@ -141,7 +141,7 @@ export default function HomePage() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-white/5">
-                {stats?.recent_matches.map(m => (
+                {(stats?.recent_matches || []).map(m => (
                   <tr key={m.id} className="hover:bg-white/5 transition-colors">
                     <td className="py-3 text-xs text-slate-400 whitespace-nowrap">{m.date}</td>
                     <td className="py-3 font-medium text-white">
@@ -223,7 +223,7 @@ export default function HomePage() {
               Verified Fixtures
             </h3>
             <div className="space-y-2">
-              {stats?.upcoming_fixtures.slice(0, 3).map(u => (
+              {(stats?.upcoming_fixtures || []).slice(0, 3).map(u => (
                 <div key={u.id} className="p-2.5 rounded-lg bg-white/5 border border-white/5 flex items-center justify-between text-xs">
                   <div className="flex items-center gap-1.5 truncate">
                     <span className="font-semibold text-white truncate">{u.home_team}</span>

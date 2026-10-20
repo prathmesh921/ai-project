@@ -206,12 +206,49 @@ function AppInner() {
   );
 }
 
+class ErrorBoundary extends React.Component<{ children: React.ReactNode }, { hasError: boolean; error: Error | null }> {
+  constructor(props: { children: React.ReactNode }) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true, error };
+  }
+  componentDidCatch(error: Error, info: React.ErrorInfo) {
+    console.error("UI Render Error:", error, info);
+  }
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen flex items-center justify-center p-6 text-center bg-[#020b06] text-white">
+          <div className="max-w-md p-8 rounded-2xl bg-[#072415] border border-[#00ff87]/30 shadow-2xl space-y-4">
+            <span className="text-4xl block">⚽</span>
+            <h2 className="text-xl font-bold text-white">Temporary Interface Refresh Required</h2>
+            <p className="text-xs text-slate-300">
+              {this.state.error?.message || "An unexpected error occurred while loading this view."}
+            </p>
+            <button
+              onClick={() => window.location.reload()}
+              className="btn-primary text-xs px-4 py-2"
+            >
+              Reload Application
+            </button>
+          </div>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
 export default function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
-        <AppInner />
-      </BrowserRouter>
-    </QueryClientProvider>
+    <ErrorBoundary>
+      <QueryClientProvider client={queryClient}>
+        <BrowserRouter>
+          <AppInner />
+        </BrowserRouter>
+      </QueryClientProvider>
+    </ErrorBoundary>
   );
 }

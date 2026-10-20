@@ -1,7 +1,22 @@
 // api.ts - Full-stack API client for UEFA Champions League AI Predictor
 import axios from 'axios';
 
-const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+let rawApiUrl = (import.meta.env.VITE_API_URL as string) || '';
+
+// If running in production on onrender.com and no env var was set, automatically connect to deployed backend
+if (!rawApiUrl && typeof window !== 'undefined' && window.location.hostname.includes('onrender.com')) {
+  rawApiUrl = 'https://ucl-predictor-backend.onrender.com';
+} else if (!rawApiUrl) {
+  rawApiUrl = 'http://localhost:8000';
+}
+
+// Ensure protocol is present
+if (rawApiUrl && !rawApiUrl.startsWith('http://') && !rawApiUrl.startsWith('https://')) {
+  rawApiUrl = `https://${rawApiUrl}`;
+}
+
+export const BASE_URL = rawApiUrl;
+
 export const api = axios.create({
   baseURL: BASE_URL,
   timeout: 30000,
