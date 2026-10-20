@@ -1,0 +1,30 @@
+services:
+  # FastAPI REST Backend Service
+  - type: web
+    name: ucl-predictor-backend
+    runtime: python
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: python -m uvicorn backend.app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.6
+
+  # React 18 + Vite Frontend Static Site
+  - type: web
+    name: ucl-predictor-frontend
+    runtime: static
+    plan: free
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: ucl-predictor-backend
+          property: host

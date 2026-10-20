@@ -2,7 +2,13 @@
 main.py - FastAPI application entrypoint for UEFA Champions League AI Match Outcome Predictor
 """
 import os
+import sys
 from contextlib import asynccontextmanager
+
+BACKEND_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if BACKEND_DIR not in sys.path:
+    sys.path.insert(0, BACKEND_DIR)
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
