@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { border-color: rgba(255, 255, 255, 0.1); }
+  body {
+    @apply bg-[#020b06] text-slate-100 font-sans antialiased;
+    background:
+      radial-gradient(ellipse 90% 45% at 50% -10%, rgba(0, 255, 135, 0.15) 0%, rgba(16, 71, 43, 0.4) 35%, transparent 70%),
+      radial-gradient(circle at 15% 50%, rgba(6, 29, 17, 0.8) 0%, transparent 50%),
+      radial-gradient(circle at 85% 30%, rgba(13, 56, 34, 0.6) 0%, transparent 60%),
+      repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.012) 0px, rgba(255, 255, 255, 0.012) 60px, transparent 60px, transparent 120px),
+      linear-gradient(180deg, #061d11 0%, #031109 40%, #020b06 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #04170d; }
+  ::-webkit-scrollbar-thumb { background: #00ff87; border-radius: 9999px; }
+}
+
+@layer components {
+  /* Pitch Stadium Glass Cards */
+  .glass-card {
+    @apply bg-[#072415]/70 backdrop-blur-xl border border-white/10 rounded-2xl;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+  .glass-card-hover {
+    @apply glass-card transition-all duration-300 hover:bg-[#0b331e]/80 hover:border-[#00ff87]/40;
+  }
+  .glass-card-hover:hover {
+    box-shadow: 0 0 25px rgba(0, 255, 135, 0.35);
+  }
+
+  /* Football Buttons */
+  .btn-primary {
+    @apply bg-[#00ff87] text-[#020b06] px-6 py-3 rounded-xl font-extrabold tracking-tight
+           hover:bg-[#34d399] active:scale-95 transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-[#00ff87]/50;
+    box-shadow: 0 0 20px rgba(0, 255, 135, 0.4);
+  }
+  .btn-primary:hover {
+    box-shadow: 0 0 35px rgba(0, 255, 135, 0.7);
+  }
+  .btn-secondary {
+    @apply border-2 border-[#00ff87]/50 text-[#00ff87] px-6 py-3 rounded-xl font-bold
+           hover:bg-[#00ff87]/15 active:scale-95 transition-all duration-200 focus:outline-none shadow-sm;
+  }
+
+  /* Badges */
+  .badge-win  { @apply bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-2.5 py-0.5 rounded-md text-xs font-black tracking-wide; }
+  .badge-draw { @apply bg-amber-500/20   text-amber-300   border border-amber-500/40   px-2.5 py-0.5 rounded-md text-xs font-black tracking-wide; }
+  .badge-loss { @apply bg-rose-500/20    text-rose-300    border border-rose-500/40    px-2.5 py-0.5 rounded-md text-xs font-black tracking-wide; }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-black text-white mb-4 tracking-tight font-sans;
+  }
+  .section-subtitle {
+    @apply text-slate-300 text-lg mb-12 max-w-2xl leading-relaxed;
+  }
+  .gradient-text {
+    @apply bg-gradient-to-r from-[#00ff87] via-[#a7f3d0] to-white bg-clip-text text-transparent;
+  }
+
+  /* Tactical Pitch Pattern */
+  .pitch-pattern {
+    position: relative;
+  }
+  .pitch-pattern::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 50% 50%, transparent 60px, rgba(255,255,255,0.02) 61px, rgba(255,255,255,0.02) 63px, transparent 64px),
+      linear-gradient(90deg, transparent 49.8%, rgba(255,255,255,0.02) 49.8%, rgba(255,255,255,0.02) 50.2%, transparent 50.2%);
+    background-size: 100% 100%, 100% 100%;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .team-badge {
+    @apply w-12 h-12 rounded-full flex items-center justify-center text-white font-black text-sm
+           border-2 border-white/20 shadow-lg shadow-black/40;
+  }
+  .nav-link {
+    @apply text-slate-300 hover:text-[#00ff87] transition-colors duration-200 text-sm font-semibold
+           relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5
+           after:bg-[#00ff87] after:transition-all after:duration-300 hover:after:w-full;
+  }
+  .metric-card {
+    @apply glass-card p-6 flex flex-col gap-2;
+  }
+  .input-field {
+    @apply bg-[#04170d]/90 border border-white/10 rounded-xl px-4 py-3 text-white
+           focus:outline-none focus:border-[#00ff87]/60 focus:bg-[#072415]
+           transition-all duration-200 w-full placeholder:text-slate-500;
+  }
+  .select-field {
+    @apply bg-[#072415] border border-white/10 rounded-xl px-4 py-3 text-white
+           focus:outline-none focus:border-[#00ff87]/60 transition-all duration-200 w-full;
+  }
+  .probability-bar {
+    @apply h-3 rounded-full transition-all duration-700 ease-out;
+  }
+}
+
+/* Animated gradient football border */
+.gradient-border {
+  position: relative;
+  background: linear-gradient(135deg, rgba(0, 255, 135, 0.1), rgba(16, 71, 43, 0.2));
+  border: 1px solid transparent;
+  border-radius: 16px;
+}
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 17px;
+  background: linear-gradient(135deg, #00ff87, #10b981, #059669, #00ff87);
+  background-size: 300% 300%;
+  animation: gradientShift 6s linear infinite;
+  z-index: -1;
+  opacity: 0.7;
+}
+@keyframes gradientShift { 0%{background-position:0% 50%} 100%{background-position:100% 50%} }
+
+/* Skeleton loader */
+.skeleton { @apply animate-pulse bg-white/5 rounded-lg; }
+
+/* Responsive container */
+.container { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
+
+/* Custom scrollbar for tables */
+.table-scroll { overflow-x: auto; scrollbar-width: thin; scrollbar-color: #00ff87 #04170d; }
+
+/* Match Scorers Pill */
+.scorer-tag {
+  @apply inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold bg-white/5 text-slate-200 border border-white/10;
+}
+

@@ -1,0 +1,30 @@
+{
+  "test_period": "2022-23 to 2024-25 (3 seasons)",
+  "train_period": "2015-16 to 2021-22 (7 seasons)",
+  "train_samples": 777,
+  "test_samples": 333,
+  "class_distribution_test": {
+    "H": 147,
+    "A": 123,
+    "D": 63
+  },
+  "feature_count": 15,
+  "features": [
+    "elo_diff",
+    "ucoef_diff",
+    "sqval_diff",
+    "home_form_pts",
+    "away_form_pts",
+    "form_diff",
+    "home_avg_gf",
+    "away_avg_gf",
+    "home_avg_ga",
+    "away_avg_ga",
+    "rest_days_diff",
+    "is_knockout",
+    "h2h_home_wins",
+    "h2h_away_wins",
+    "h2h_draws"
+  ],
+  "split_method": "Chronological Season Split (Zero Temporal Data Leakage)"
+}

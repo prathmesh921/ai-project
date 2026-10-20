@@ -1,0 +1,290 @@
+{
+  "Real Madrid": {
+    "elo": 2050,
+    "uefa_coef": 136,
+    "squad_value_M": 1200,
+    "colour": "#FFFFFF",
+    "attack": 2.2,
+    "defence": 0.5
+  },
+  "Manchester City": {
+    "elo": 2020,
+    "uefa_coef": 148,
+    "squad_value_M": 1350,
+    "colour": "#6CABDD",
+    "attack": 2.0839,
+    "defence": 0.5871
+  },
+  "Bayern Munich": {
+    "elo": 2010,
+    "uefa_coef": 144,
+    "squad_value_M": 1050,
+    "colour": "#DC052D",
+    "attack": 2.0452,
+    "defence": 0.6161
+  },
+  "Liverpool": {
+    "elo": 1990,
+    "uefa_coef": 114,
+    "squad_value_M": 950,
+    "colour": "#C8102E",
+    "attack": 1.9677,
+    "defence": 0.6742
+  },
+  "Paris Saint-Germain": {
+    "elo": 1985,
+    "uefa_coef": 87,
+    "squad_value_M": 1000,
+    "colour": "#003087",
+    "attack": 1.9484,
+    "defence": 0.6887
+  },
+  "Barcelona": {
+    "elo": 1975,
+    "uefa_coef": 99,
+    "squad_value_M": 900,
+    "colour": "#A50044",
+    "attack": 1.9097,
+    "defence": 0.7177
+  },
+  "Chelsea": {
+    "elo": 1960,
+    "uefa_coef": 72,
+    "squad_value_M": 900,
+    "colour": "#034694",
+    "attack": 1.8516,
+    "defence": 0.7613
+  },
+  "Atletico Madrid": {
+    "elo": 1950,
+    "uefa_coef": 111,
+    "squad_value_M": 600,
+    "colour": "#CB3524",
+    "attack": 1.8129,
+    "defence": 0.7903
+  },
+  "Inter Milan": {
+    "elo": 1940,
+    "uefa_coef": 90,
+    "squad_value_M": 650,
+    "colour": "#0068A8",
+    "attack": 1.7742,
+    "defence": 0.8194
+  },
+  "Borussia Dortmund": {
+    "elo": 1920,
+    "uefa_coef": 97,
+    "squad_value_M": 500,
+    "colour": "#FDE100",
+    "attack": 1.6968,
+    "defence": 0.8774
+  },
+  "RB Leipzig": {
+    "elo": 1900,
+    "uefa_coef": 72,
+    "squad_value_M": 450,
+    "colour": "#DD0741",
+    "attack": 1.6194,
+    "defence": 0.9355
+  },
+  "Napoli": {
+    "elo": 1890,
+    "uefa_coef": 55,
+    "squad_value_M": 650,
+    "colour": "#12A0D7",
+    "attack": 1.5806,
+    "defence": 0.9645
+  },
+  "AC Milan": {
+    "elo": 1880,
+    "uefa_coef": 68,
+    "squad_value_M": 500,
+    "colour": "#FB090B",
+    "attack": 1.5419,
+    "defence": 0.9935
+  },
+  "Benfica": {
+    "elo": 1870,
+    "uefa_coef": 79,
+    "squad_value_M": 350,
+    "colour": "#CC0000",
+    "attack": 1.5032,
+    "defence": 1.0226
+  },
+  "Porto": {
+    "elo": 1860,
+    "uefa_coef": 82,
+    "squad_value_M": 300,
+    "colour": "#004B9B",
+    "attack": 1.4645,
+    "defence": 1.0516
+  },
+  "Juventus": {
+    "elo": 1855,
+    "uefa_coef": 96,
+    "squad_value_M": 550,
+    "colour": "#000000",
+    "attack": 1.4452,
+    "defence": 1.0661
+  },
+  "Tottenham": {
+    "elo": 1850,
+    "uefa_coef": 51,
+    "squad_value_M": 700,
+    "colour": "#132257",
+    "attack": 1.4258,
+    "defence": 1.0806
+  },
+  "Ajax": {
+    "elo": 1840,
+    "uefa_coef": 67,
+    "squad_value_M": 280,
+    "colour": "#CC0000",
+    "attack": 1.3871,
+    "defence": 1.1097
+  },
+  "Sevilla": {
+    "elo": 1835,
+    "uefa_coef": 72,
+    "squad_value_M": 280,
+    "colour": "#C41231",
+    "attack": 1.3677,
+    "defence": 1.1242
+  },
+  "Shakhtar Donetsk": {
+    "elo": 1820,
+    "uefa_coef": 63,
+    "squad_value_M": 200,
+    "colour": "#F97B00",
+    "attack": 1.3097,
+    "defence": 1.1677
+  },
+  "Lazio": {
+    "elo": 1815,
+    "uefa_coef": 30,
+    "squad_value_M": 300,
+    "colour": "#87CEEB",
+    "attack": 1.2903,
+    "defence": 1.1823
+  },
+  "Eintracht Frankfurt": {
+    "elo": 1810,
+    "uefa_coef": 37,
+    "squad_value_M": 300,
+    "colour": "#E1000F",
+    "attack": 1.271,
+    "defence": 1.1968
+  },
+  "Celtic": {
+    "elo": 1790,
+    "uefa_coef": 26,
+    "squad_value_M": 150,
+    "colour": "#16A765",
+    "attack": 1.1935,
+    "defence": 1.2548
+  },
+  "Club Brugge": {
+    "elo": 1780,
+    "uefa_coef": 35,
+    "squad_value_M": 180,
+    "colour": "#003399",
+    "attack": 1.1548,
+    "defence": 1.2839
+  },
+  "Rangers": {
+    "elo": 1770,
+    "uefa_coef": 22,
+    "squad_value_M": 120,
+    "colour": "#003399",
+    "attack": 1.1161,
+    "defence": 1.3129
+  },
+  "Salzburg": {
+    "elo": 1780,
+    "uefa_coef": 40,
+    "squad_value_M": 160,
+    "colour": "#EE1C25",
+    "attack": 1.1548,
+    "defence": 1.2839
+  },
+  "Copenhagen": {
+    "elo": 1760,
+    "uefa_coef": 28,
+    "squad_value_M": 130,
+    "colour": "#004B99",
+    "attack": 1.0774,
+    "defence": 1.3419
+  },
+  "PSV Eindhoven": {
+    "elo": 1775,
+    "uefa_coef": 44,
+    "squad_value_M": 200,
+    "colour": "#CC0000",
+    "attack": 1.1355,
+    "defence": 1.2984
+  },
+  "Feyenoord": {
+    "elo": 1770,
+    "uefa_coef": 42,
+    "squad_value_M": 220,
+    "colour": "#CC0000",
+    "attack": 1.1161,
+    "defence": 1.3129
+  },
+  "Bayer Leverkusen": {
+    "elo": 1895,
+    "uefa_coef": 60,
+    "squad_value_M": 550,
+    "colour": "#E32221",
+    "attack": 1.6,
+    "defence": 0.95
+  },
+  "Arsenal": {
+    "elo": 1965,
+    "uefa_coef": 72,
+    "squad_value_M": 900,
+    "colour": "#EF0107",
+    "attack": 1.871,
+    "defence": 0.7468
+  },
+  "Aston Villa": {
+    "elo": 1860,
+    "uefa_coef": 25,
+    "squad_value_M": 600,
+    "colour": "#670E36",
+    "attack": 1.4645,
+    "defence": 1.0516
+  },
+  "Monaco": {
+    "elo": 1840,
+    "uefa_coef": 42,
+    "squad_value_M": 350,
+    "colour": "#CE1126",
+    "attack": 1.3871,
+    "defence": 1.1097
+  },
+  "Atalanta": {
+    "elo": 1870,
+    "uefa_coef": 52,
+    "squad_value_M": 450,
+    "colour": "#1E90FF",
+    "attack": 1.5032,
+    "defence": 1.0226
+  },
+  "Sporting CP": {
+    "elo": 1850,
+    "uefa_coef": 55,
+    "squad_value_M": 280,
+    "colour": "#006600",
+    "attack": 1.4258,
+    "defence": 1.0806
+  },
+  "Young Boys": {
+    "elo": 1740,
+    "uefa_coef": 28,
+    "squad_value_M": 100,
+    "colour": "#FFDD00",
+    "attack": 1.0,
+    "defence": 1.4
+  }
+}
